@@ -1,3 +1,4 @@
+import 'package:creating_first_project_alhamdulillah/Home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,16 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const Placeholder(
-        child: Align(
-          child: Center(
-            child: Text(
-              "Wellcome to 30 days flutter, Alhamduliliah alllah ka lakh lakh shukar hai Sal lallahu alaihi wa aali hi  wasalam ",
-            ),
-          ),
-        ),
-      ),
-    );
+    return MaterialApp(home: HomePage());
   }
 }
