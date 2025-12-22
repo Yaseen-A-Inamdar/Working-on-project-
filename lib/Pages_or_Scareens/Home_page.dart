@@ -18,12 +18,12 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Yaseen App, Devloper"),
+        title: Text("brokey bhai app develepur"),
         backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Text(
-          "Wellcome to $num1 days  flutter by $name, Alhamduliliah alllah ka lakh lakh shukar hai Sal lallahu alaihi wa aali hi  wasalam ",
+          "Wellcome to $num1 days  flutter by $name, brokey 62 ",
         ),
       ),
       drawer: Drawer(),
