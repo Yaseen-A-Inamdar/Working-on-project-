@@ -1,3 +1,4 @@
+import 'package:creating_first_project_alhamdulillah/utills/routes.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -7,6 +8,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
+      child: SingleChildScrollView(
       child: Column(
         children: [
           Image.asset(
@@ -15,8 +17,8 @@ class LoginPage extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Text(
-            " Welcome ",
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            " Welcome",
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 4),
           Padding(
@@ -41,20 +43,45 @@ class LoginPage extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      MyRoutes.homeRoute,
+                    ); // login logic
+                  },
                   child: Text(
                     "Login",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    style: TextStyle(
+                      color: Colors.white, // text color
+                      fontSize: 16,
+                    ),
                   ),
-                  onPressed: () {
-                    print("Welcome to the Coding Yaseen");
-                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue, // 🔵 button color
+                    minimumSize: Size(140, 40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                        10,
+                      ), // rounded corners
+                    ),
+                  ),
                 ),
+
+                // ElevatedButton(
+                //   child: Text("Login"),
+                //   style: TextButton.styleFrom(
+                //     minimumSize: Size(120, 45),
+                //   ),
+                //   onPressed: () {
+                //     print("Welcome to the Coding Yaseen");
+                //   },
+                // ),
               ],
             ),
           ),
         ],
       ),
+      )
     );
   }
 }
